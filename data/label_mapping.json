@@ -1,0 +1,32 @@
+{
+    "label2id": {
+        "Communal Polarization": 0,
+        "Geopolitics": 1,
+        "Interfaith": 2,
+        "Internal Matter": 3,
+        "Law and Order": 4,
+        "Legal Activism": 5,
+        "Mobilization & Mass Action": 6,
+        "Narrative Construction": 7,
+        "National Security": 8,
+        "Politics": 9,
+        "Property": 10,
+        "Religious Influence and Expansion": 11,
+        "Unrelated": 12
+    },
+    "id2label": {
+        "0": "Communal Polarization",
+        "1": "Geopolitics",
+        "2": "Interfaith",
+        "3": "Internal Matter",
+        "4": "Law and Order",
+        "5": "Legal Activism",
+        "6": "Mobilization & Mass Action",
+        "7": "Narrative Construction",
+        "8": "National Security",
+        "9": "Politics",
+        "10": "Property",
+        "11": "Religious Influence and Expansion",
+        "12": "Unrelated"
+    }
+}
