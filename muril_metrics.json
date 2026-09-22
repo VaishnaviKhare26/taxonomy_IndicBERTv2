@@ -1,0 +1,7 @@
+{
+    "model_name": "google/muril-base-cased",
+    "model_display_name": "MuRIL (google/muril-base-cased)",
+    "test_accuracy": 0.3856655290102389,
+    "test_macro_f1": 0.12346530961915579,
+    "test_weighted_f1": 0.25350615760172074
+}
