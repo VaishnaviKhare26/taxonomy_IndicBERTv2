@@ -172,12 +172,27 @@ def main():
     val_dataset = Dataset.from_pandas(val_df[["text", "label"]])
     test_dataset = Dataset.from_pandas(test_df[["text", "label"]])
 
-    # 3. Load Tokenizer & Tokenize (IndicBERT v1 ALBERT Tokenizer)
+    # 3. Load Tokenizer & Tokenize (IndicBERT v1 ALBERT Tokenizer - Gated Repo)
+    hf_token = os.environ.get("HF_TOKEN", True)
     print(f"\nLoading tokenizer for {MODEL_NAME} (keep_accents=True)...")
     try:
-        tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, keep_accents=True)
-    except Exception:
-        tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+        try:
+            tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, keep_accents=True, token=hf_token)
+        except TypeError:
+            tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, token=hf_token)
+    except Exception as e:
+        print("\n" + "!" * 75)
+        print("ERROR: Could not access ai4bharat/indic-bert (Gated Repository)")
+        print("!" * 75)
+        print("ai4bharat/indic-bert requires one-time terms acceptance on Hugging Face:")
+        print("  1. Visit https://huggingface.co/ai4bharat/indic-bert while logged in.")
+        print("  2. Click 'Agree and access repository' (Access is granted instantly).")
+        print("  3. Log in inside Colab before running the script:")
+        print("       from huggingface_hub import login; login('YOUR_HF_TOKEN')")
+        print("     OR:")
+        print("       %env HF_TOKEN=YOUR_HF_TOKEN")
+        print("!" * 75 + "\n")
+        raise e
 
     def tokenize_batch(batch):
         return tokenizer(batch["text"], truncation=True, max_length=MAX_LENGTH)
@@ -195,7 +210,8 @@ def main():
         MODEL_NAME,
         num_labels=num_labels,
         id2label=id2label,
-        label2id=label2id
+        label2id=label2id,
+        token=hf_token
     )
 
     # 5. Metrics & Training Setup
