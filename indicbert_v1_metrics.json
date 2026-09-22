@@ -1,0 +1,7 @@
+{
+    "model_name": "ai4bharat/indic-bert",
+    "model_display_name": "IndicBERT v1 (ai4bharat/indic-bert)",
+    "test_accuracy": 0.36177474402730375,
+    "test_macro_f1": 0.14523311001733336,
+    "test_weighted_f1": 0.28064752708366425
+}

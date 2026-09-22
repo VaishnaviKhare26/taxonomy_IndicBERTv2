@@ -1,0 +1,24 @@
+MODEL: IndicBERT v1 (ai4bharat/indic-bert)
+Accuracy:    0.3618
+Macro F1:    0.1452
+Weighted F1: 0.2806
+
+                                   precision    recall  f1-score   support
+
+            Communal Polarization     0.0000    0.0000    0.0000        16
+                      Geopolitics     0.4651    0.5263    0.4938        38
+                       Interfaith     0.0000    0.0000    0.0000         6
+                  Internal Matter     0.0000    0.0000    0.0000        18
+                    Law and Order     0.3750    0.7021    0.4889        47
+                   Legal Activism     0.0000    0.0000    0.0000        17
+       Mobilization & Mass Action     0.0000    0.0000    0.0000         5
+           Narrative Construction     0.0000    0.0000    0.0000         4
+                National Security     0.4030    0.5745    0.4737        47
+                         Politics     0.3333    0.0370    0.0667        27
+                         Property     0.0000    0.0000    0.0000         3
+Religious Influence and Expansion     0.0000    0.0000    0.0000        20
+                        Unrelated     0.2717    0.5556    0.3650        45
+
+                         accuracy                         0.3618       293
+                        macro avg     0.1422    0.1843    0.1452       293
+                     weighted avg     0.2576    0.3618    0.2806       293

@@ -1,0 +1,7 @@
+{
+    "model_name": "l3cube-pune/hindi-bert-v2",
+    "model_display_name": "L3Cube HindBERT (l3cube-pune/hindi-bert-v2)",
+    "test_accuracy": 0.4948805460750853,
+    "test_macro_f1": 0.2563163132614568,
+    "test_weighted_f1": 0.4195138079567382
+}
