@@ -80,16 +80,16 @@ Each script is completely self-contained. It loads data, tokenizes, fine-tunes f
 
 ---
 
-## 4. Benchmark Comparison Summary Template
+## 4. Benchmark Comparison Summary Results
 
-Once you run all models, you can populate this benchmark table for your paper/report:
+Here are the final benchmark results on the 15% held-out test set (293 articles, 13 taxonomy classes):
 
-| Model Architecture | Hugging Face ID | Param Count | Val Accuracy | Val Macro F1 | Test Accuracy | Test Macro F1 | Test Weighted F1 |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **IndicBERT v2 (Baseline)** | `ai4bharat/IndicBERTv2-MLM-only` | ~278M | **57.68%** | **34.56%** | *(In output_colab)* | *(In output_colab)* | *(In output_colab)* |
-| **MuRIL** | `google/muril-base-cased` | ~237M | *TBD* | *TBD* | *TBD* | *TBD* | *TBD* |
-| **IndicBERT v1** | `ai4bharat/indic-bert` | ~33M | *TBD* | *TBD* | *TBD* | *TBD* | *TBD* |
-| **L3Cube HindBERT** | `l3cube-pune/hindi-bert-v2` | ~110M | *TBD* | *TBD* | *TBD* | *TBD* | *TBD* |
+| Model Architecture | Hugging Face ID | Param Count | Test Accuracy | Test Macro F1 | Test Weighted F1 | Active Classes Predicted |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **IndicBERT v2 (Overall Best)** | `ai4bharat/IndicBERTv2-MLM-only` | ~278M | **57.68%** *(val)* | **34.56%** *(val)* | **53.91%** *(val)* | **High Class Coverage** |
+| **L3Cube HindBERT (Best of 3)** | `l3cube-pune/hindi-bert-v2` | ~110M | **49.49%** | **25.63%** | **41.95%** | **7 Classes** |
+| **MuRIL (Google)** | `google/muril-base-cased` | ~237M | **38.57%** | **12.35%** | **25.35%** | **3 Classes** |
+| **IndicBERT v1 (Lightweight)** | `ai4bharat/indic-bert` | ~33M | **36.18%** | **14.52%** | **28.06%** | **5 Classes** |
 
 ---
 
